@@ -78,7 +78,6 @@
       to { opacity: 1; transform: translateY(0); }
     }
 
-    /* Глітч-ефект */
     @keyframes glitch {
       0% { transform: translate(0); }
       20% { transform: translate(-2px, 2px); }
@@ -91,7 +90,6 @@
       animation: glitch 0.3s infinite;
     }
 
-    /* Шепіт */
     .whisper {
       position: fixed;
       bottom: 20%;
@@ -117,10 +115,14 @@
 
   <a class="fake-link" onclick="getMyData()">Yimmenu for free</a>
 
+  <!-- ДОБАВЛЕНО: блок для отображения данных -->
+  <div class="data-box" id="myData"></div>
+
+  <!-- ДОБАВЛЕНО: блок карты -->
+  <div id="map"></div>
 
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
-    // Інколи вмикається glitch-ефект
     setInterval(() => {
       document.body.classList.add("glitching");
       setTimeout(() => document.body.classList.remove("glitching"), 200);
